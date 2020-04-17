@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const hasher = require('sha-1')
-const db_cred = require('./database_cred')
+const db_cred = require('../database_cred')
 const writetoDB = require('./updateDB')
 /**
  * 

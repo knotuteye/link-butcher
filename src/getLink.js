@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const db_cred = require('./database_cred')
+const db_cred = require('../database_cred')
 /**
  * @param {String} short the minified url
  * @param {Function} callback 
