@@ -11,7 +11,7 @@ function getShort(link, callback) {
     let short = ''
     let connection = mysql.createConnection(db_cred);
     connection.connect();
-    connection.query(`SELECT short from map where link='${link}'`, function (error, results, fields) {
+    connection.query(`SELECT short from ${db_cred.table} where link='${link}'`, function (error, results, fields) {
         if (error) throw error;
         if (results[0] == undefined) {
             connection.end();
