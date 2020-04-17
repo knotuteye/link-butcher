@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shrink!</title>
+</head>
+
+<body>
+    <h1>URL Shrink!</h1>
+    <h3>Enter your url below:</h3>
+    <label for="url">http://www.</label>
+    <input type="text" id="url" />
+    <p id="err-p" style="visibility: hidden;">Please enter a valid link</p>
+    <button onclick="getShort()">Get your link!</button>
+    <a id="new-link"></a>
+    <script>
+        function getShort() {
+            if (document.getElementById('url').value == '') {
+                document.getElementById('err-p').style.visibility = 'visible'
+                return
+            }
+            fetch(window.location.href + 'new?link=' + document.getElementById('url').value).then((response) => {
+                return response.text()
+            }).then((data) => {
+                document.getElementById("new-link").href = window.location.href + data
+                document.getElementById("new-link").innerText = window.location.href + data
+            })
+        }
+    </script>
+</body>
+
+</html>
