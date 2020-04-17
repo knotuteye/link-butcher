@@ -2,15 +2,17 @@
 
 Link Butcher is a JavaScript server-side and client application for shortening long, unwieldy URLs. It was originally intended to be a lightweight URL minifier for private servers but it works for public networks as well.
 
-[![](https://img.shields.io/badge/-syntactic%20sugar%20-brightgreen)]()
+![style](https://img.shields.io/static/v1?label=style&message=syntactic%20sugar&color=<COLOR>&style=for-the-badge) 
+![version](https://img.shields.io/static/v1?label=version&message=1.0.0&color=important&style=for-the-badge)
+![status](https://img.shields.io/static/v1?label=status&message=active%20development&color=blue&style=for-the-badge)
 
-[![](https://img.shields.io/badge/-syntactic%20sugar%20-brightgreen)]()
 
-[![](https://img.shields.io/badge/-syntactic%20sugar%20-brightgreen)]()
+![backend](https://img.shields.io/static/v1?label=&message=Node.JS&color=success&style=for-the-badge&logo=Node.js)
+![database](https://img.shields.io/static/v1?label=&message=MySQL&color=black&style=for-the-badge&logo=mysql)
 
 ## Requirements
 
-1. Host server running Node JS
+1. Host server running Node JS 
 2. MySQL server
 
 ## Installation
