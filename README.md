@@ -1,4 +1,4 @@
-# Link Butcher
+# Link Butcher 🔪🌐🩸 
 
 Link Butcher is a JavaScript server-side and client application for shortening long, unwieldy URLs. It was originally intended to be a lightweight URL minifier for private servers but it works for public networks as well.
 
