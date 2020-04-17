@@ -4,7 +4,7 @@
   "description": "A simple url shortening API and web app built with NodeJS and MySQL.",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/knotuteye/link-butcher.git"
   },
   "main": "index.js",
   "scripts": {

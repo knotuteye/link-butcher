@@ -5,12 +5,23 @@ const db_cred = require('./database_cred')
  * 
  */
 function createDB() {
-    let connection = mysql.createConnection(db_cred);
+    let connection = mysql.createConnection({
+        host: db_cred.host,
+        user: db_cred.user,
+        password: db_cred.password
+    });
     connection.connect()
-    connection.query(`INSERT INTO map (short, link, createdAt) values("${short}","${link}", curdate())`,
+    connection.query(`CREATE DATABASE ${db_cred.database};
+    USE ${db_cred.database};
+    CREATE TABLE ${db_cred.table}; (
+        short varchar(6) NOT NULL,
+        link varchar(255) NOT NULL,
+        createdAt date NOT NULL,
+        PRIMARY KEY (short),
+    );
+    `,
         function (error, results, fields) {
             if (error) throw error;
-
         })
     connection.end();
 }
