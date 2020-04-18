@@ -5,30 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Butcher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Link Butcher</h1>
-    <h3>Enter your url below:</h3>
-    <label for="url">http://www.</label>
-    <input type="text" id="url" />
-    <p id="err-p" style="visibility: hidden;">Please enter a valid link</p>
-    <button onclick="getShort()">Get your link!</button>
-    <a id="new-link"></a>
+    <h1>Link Butcher 🔪🌐</h1>
+    <div class="form">
+        <h3>Enter your url below:</h3>
+        <label for="url">http://www.</label>
+        <input type="text" id="url" autofocus />
+        <p id="err-p">Please enter a valid link</p>
+        <button onclick="getShort()">Butcher !</button>
+        <h3 id="new-link-h3">New link:</h3>
+        <a id="new-link"></a>
+    </div>
     <script>
         function getShort() {
             if (document.getElementById('url').value == '') {
-                document.getElementById('err-p').style.visibility = 'visible'
+                document.getElementById('err-p').style.display = 'block'
                 return
             }
             fetch(window.location.href + 'new?link=' + document.getElementById('url').value).then((response) => {
                 return response.text()
             }).then((data) => {
+                document.getElementById("new-link-h3").style.display = 'block'
                 document.getElementById("new-link").href = window.location.href + data
                 document.getElementById("new-link").innerText = window.location.href + data
             })
         }
     </script>
+    <style>
+        * {
+            transition: all ease-in-out 150ms;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eee;
+        }
+
+        h1 {
+            text-decoration: none;
+            background-color: green;
+            margin: 0;
+            padding: 10px 1rem;
+            color: white;
+            box-shadow: 1px 2px 5px grey;
+        }
+
+        .form {
+            background-color: #fff;
+            width: 80%;
+            max-width: 23rem;
+            margin: calc(50vh - 10rem) auto 0;
+            padding: 20px 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 1px 2px 5px #bbb;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 1.2em;
+            text-align: start;
+        }
+
+        #url {
+            border: none;
+            border-bottom: 2px solid green;
+            outline: none;
+            width: 15rem;
+            margin-left: -4px;
+            font-size: 1.2em;
+            background-color: transparent;
+            text-align: start;
+        }
+
+        #url:focus,
+        #url:hover {
+            border-color: yellowgreen;
+        }
+
+        #err-p {
+            color: red;
+            font-size: 0.8em;
+            display: none;
+            margin-bottom: 0;
+            margin-top: 10px;
+            grid-column: span 2;
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 12px 10px;
+            grid-column: span 2;
+        }
+
+        button:hover {
+            background-color: yellowgreen;
+            color: black;
+        }
+
+        #new-link {
+            text-decoration: none;
+            color: blue;
+            text-decoration: underline;
+            font-style: italic;
+            grid-column: span 2;
+            text-align: center;
+        }
+
+        #new-link-h3 {
+            display: none;
+        }
+    </style>
 </body>
 
 </html>
