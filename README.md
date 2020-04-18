@@ -4,7 +4,7 @@ Link Butcher is a JavaScript server-side and client application for shortening l
 
 ![style](https://img.shields.io/static/v1?label=style&message=syntactic%20sugar&color=<COLOR>&style=for-the-badge) 
 ![version](https://img.shields.io/static/v1?label=version&message=1.0.0&color=important&style=for-the-badge)
-![status](https://img.shields.io/static/v1?label=status&message=active%20development&color=blue&style=for-the-badge)
+![status](https://img.shields.io/static/v1?label=status&message=finished&color=blue&style=for-the-badge)
 
 
 ![backend](https://img.shields.io/static/v1?label=&message=Node.JS&color=success&style=for-the-badge&logo=Node.js)
